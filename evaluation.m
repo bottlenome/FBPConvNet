@@ -11,7 +11,8 @@ run ./matconvnet-1.0-beta23/matlab/vl_setupnn
 load preproc_x20_ellipse_fullfbp.mat
 load('./pretrain/net-epoch-151.mat')
 
-cmode='gpu'; % 'cpu'
+% cmode='gpu'; % 'cpu'
+cmode='cpu';
 if strcmp(cmode,'gpu')
     net = vl_simplenn_move(net, 'gpu') ;
 else
